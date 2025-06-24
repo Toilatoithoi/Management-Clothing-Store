@@ -1,0 +1,81 @@
+// là các base chung
+:root {
+  --white: #ffffff;
+  --primary: #bc0517;
+  --primary-color: #bc0517;
+}
+
+html {
+  overflow: hidden;
+  font-size: 62.5%; // 1rem = 10px
+
+  ::-webkit-scrollbar {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #b3b3b38b;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    background: #666666;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: var(--text-color-1);
+}
+body {
+  font-size: 1.4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: inherit;
+}
+
+.rc-slider {
+  .rc-slider-track {
+    background-color: #666;
+    opacity: 0.5;
+  }
+  .rc-slider-handle {
+    border-color: #666666 !important;
+    background-color: #666666 !important;
+    opacity: 1;
+    &.rc-slider-handle-dragging {
+      box-shadow: 0 0 0 5px #9a9a9a86 !important;
+    }
+  }
+}
+
+.btn {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.6rem;
+  border-radius: 8px;
+  &-primary {
+    background-color: var(--primary);
+    color: white;
+    &:disabled{
+      opacity: 0.4;
+    }
+  }
+  &:disabled{
+    opacity: 0.4;
+  }
+}
